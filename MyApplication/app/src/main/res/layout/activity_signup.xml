@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bglogin"
+    android:blur
+    tools:context=".signup">
+
+    <TextView
+        android:layout_width="207dp"
+        android:layout_height="64dp"
+        android:alpha="0.5"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="SIGN UP"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="59dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FULL NAME"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="157dp" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:background="@drawable/button"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="157dp"
+        android:alpha="0.5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMAIL"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="217dp" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:background="@drawable/button"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="217dp"
+        android:alpha="0.5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PHONE NUMBER"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="275dp" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:background="@drawable/button"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="275dp"
+        android:alpha="0.5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADDRESS"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="338dp" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:inputType="textMultiLine"
+        android:background="@drawable/button"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="338dp"
+        android:alpha="0.5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USER TYPE"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="399dp" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:background="@drawable/button"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="401dp"
+        android:alpha="0.5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PASSWORD"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="456dp" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:background="@drawable/button"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="456dp"
+        android:alpha="0.5"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/blue"
+        android:text="sign up"
+        android:textSize="20dp"
+        android:alpha="0.9"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="531dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

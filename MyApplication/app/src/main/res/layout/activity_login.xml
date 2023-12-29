@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login"
+    android:background="@color/bg">
+
+
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="88dp"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <EditText
+        android:layout_width="351dp"
+        android:layout_height="51dp"
+        android:alpha="1"
+        android:background="@drawable/button"
+        android:paddingLeft="35dp"
+        android:hint="Please enter your USERNAME here"
+        android:textColorHint="@color/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="288dp"
+        tools:layout_editor_absolutex="30dp" />
+
+    <EditText
+        android:layout_width="351dp"
+        android:layout_height="51dp"
+        android:background="@drawable/button"
+        android:paddingLeft="35dp"
+        android:hint="Please enter your PASSWORD here"
+        android:textColorHint="@color/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="363dp"
+        tools:layout_editor_absolutex="30dp" />
+
+    <Button
+        android:layout_width="347dp"
+        android:layout_height="59dp"
+        android:backgroundTint="@color/button"
+        android:text="Sign In"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="460dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
