@@ -18,7 +18,9 @@
     <Button
         android:layout_width="180dp"
         android:layout_height="83dp"
-        android:background="@drawable/btn"
+        android:background="#ff0000"
         android:text="submit"
-        android:textSize="40"
+        android:textSize="40dp"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="169dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
