@@ -39,73 +39,105 @@
         />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="350dp"
+
+        android:layout_width="300dp"
         android:layout_height="200"
         tools:layout_editor_absoluteX="25dp"
         tools:layout_editor_absoluteY="163dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:layout_width="129dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/deepak" />
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/cream"
+                    android:orientation="vertical">
 
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="401dp"
-            android:layout_height="211dp"
-            android:text="DEEPAK ND"
-            android:textColor="@color/black"
-            android:textSize="10dp"
-            tools:layout_editor_absoluteX="100dp"
-            tools:layout_editor_absoluteY="355dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="180dp"
-            android:src="@drawable/deepak" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name:" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="vbn"
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phone" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Address" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Address" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+
 
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:layout_width="139dp"
-        android:layout_height="61dp"
-        android:text="BLOOD GROUP : O+"
-        android:textColor="@color/black"
-        android:textSize="10dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="414dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Thrissur 680013 "
-        android:textColor="@color/black"
-        android:textSize="10"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="104dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ADDRESS           :  Naduvinpurakkal (H)"
-        android:textColor="@color/black"
-        android:textSize="10"
-        tools:layout_editor_absoluteX="200dp"
-        tools:layout_editor_absoluteY="423dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="95dp"
-        android:layout_height="wrap_content"
-        android:text="Kuttoor PO"
-        android:textColor="@color/black"
-        android:textSize="10"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="84dp" /><![CDATA[
-
-
-    tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="375dp" />
-
-
-]]>
-]]>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
