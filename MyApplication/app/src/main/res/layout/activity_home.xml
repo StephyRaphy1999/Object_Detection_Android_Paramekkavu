@@ -13,19 +13,18 @@
 
         android:id="@+id/rel"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:background="@color/bg"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="3dp">
+        tools:layout_editor_absoluteY="0dp">
 
-        <TextView
-            android:layout_width="400dp"
-            android:layout_height="60dp"
-            android:text="EYE"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="30dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/Aeye"
     </RelativeLayout>
+
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom"
@@ -38,106 +37,7 @@
 
         />
 
-    <androidx.cardview.widget.CardView
 
-        android:layout_width="300dp"
-        android:layout_height="200"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="163dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-
-            <ImageView
-                android:layout_width="129dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/deepak" />
-
-            <RelativeLayout
-                android:layout_width="150dp"
-                android:layout_height="200dp"
-                >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/cream"
-                    android:orientation="vertical">
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Name:" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:text="vbn"
-
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Phone" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Address" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Address" />
-
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-            </RelativeLayout>
-        </LinearLayout>
-
-
-
-
-
-
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

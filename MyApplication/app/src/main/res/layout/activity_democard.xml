@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".democard"
+    android:background="@color/field">
+
+    <RelativeLayout
+
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/bg"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/Aeye"
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="360dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/field"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="162dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="100dp">
+
+
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/track" />
+        </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="360dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/field"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="315dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="100dp">
+
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/warning" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alert"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="360dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/field"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="470dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="100dp">
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/phone" />
+        </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/bg"
+        app:menu="@menu/bottom_navi"
+        tools:layout_editor_absoluteX="0dp"
+
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

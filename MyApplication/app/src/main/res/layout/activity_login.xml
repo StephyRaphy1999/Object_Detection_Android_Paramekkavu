@@ -8,50 +8,67 @@
     android:background="@color/bg">
 
 
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/Aeye"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="16dp" />
+
     <TextView
         android:layout_width="165dp"
         android:layout_height="88dp"
         android:text="Sign In"
         android:textColor="@color/white"
-        android:textSize="35dp"
+        android:textSize="30dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="66dp" />
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="252dp" />
 
     <EditText
         android:layout_width="351dp"
         android:layout_height="51dp"
         android:alpha="1"
         android:background="@drawable/button"
-        android:paddingLeft="35dp"
         android:hint="Please enter your USERNAME here"
+        android:paddingLeft="35dp"
         android:textColorHint="@color/text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="288dp"
+        tools:layout_editor_absoluteY="340dp"
         tools:layout_editor_absolutex="30dp" />
 
     <EditText
         android:layout_width="351dp"
         android:layout_height="51dp"
         android:background="@drawable/button"
-        android:paddingLeft="35dp"
         android:hint="Please enter your PASSWORD here"
+        android:paddingLeft="35dp"
         android:textColorHint="@color/text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="363dp"
+        tools:layout_editor_absoluteY="405dp"
         tools:layout_editor_absolutex="30dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account? Create new"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="608dp" />
+
     <Button
-        android:layout_width="347dp"
-        android:layout_height="59dp"
+        android:layout_width="349dp"
+        android:layout_height="54dp"
         android:backgroundTint="@color/button"
         android:text="Sign In"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.548"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="461dp" />
+        tools:layout_editor_absoluteY="488dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
