@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#00FF00</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#0000FF</color>
+    <color name="cream">#ffcc99</color>
+    <color name="dodgerblue">#536cdd</color>
+    <color name="peakcockgreen">#0f3b52</color>
+    <color name="bg">#202342</color>
+    <color name="button">#43cc80</color>
+    <color name="field">#33375a</color>
+    <color name="text">#72747e</color>
+
+</resources>

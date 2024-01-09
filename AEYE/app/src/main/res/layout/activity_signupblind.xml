@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg"
-    tools:context=".signup22">
-
+    tools:context=".signup1">
 
     <TextView
         android:layout_width="157dp"
@@ -114,7 +113,7 @@
         android:layout_marginBottom="12dp"
         android:alpha="0.5"
         android:backgroundTint="@color/field"
-        android:text="UPLOAD CERTIFICATE"
+        android:text="UPLOAD PHOTO"
         android:textColor="@color/text"
         android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/button"
@@ -133,6 +132,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
