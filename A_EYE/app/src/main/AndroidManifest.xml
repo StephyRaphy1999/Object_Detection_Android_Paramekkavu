@@ -13,9 +13,6 @@
         android:theme="@style/Theme.A_EYE"
         tools:targetApi="31">
         <activity
-            android:name=".indexActivity"
-            android:exported="false" />
-        <activity
             android:name=".userselection"
             android:exported="false" />
         <activity
@@ -25,7 +22,7 @@
             android:name=".signupblind"
             android:exported="false" />
         <activity
-            android:name=".home"
+            android:name=".indexActivity"
             android:exported="false" />
         <activity
             android:name=".signin"

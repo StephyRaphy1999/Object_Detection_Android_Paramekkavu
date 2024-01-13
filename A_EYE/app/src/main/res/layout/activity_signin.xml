@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".signin"
-    android:background="@color/bg">
+    android:background="@color/bg"
+    >
 
 
     <ImageView
@@ -34,30 +35,31 @@
         android:layout_width="351dp"
         android:layout_height="51dp"
         android:layout_marginBottom="16dp"
-        android:alpha="1"
-        android:background="@drawable/button"
+        android:alpha="0.5"
         android:hint="Please enter your USERNAME here"
         android:paddingLeft="35dp"
-        android:textColorHint="@color/text"
         app:layout_constraintBottom_toTopOf="@+id/editText6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absolutex="30dp" />
+        tools:layout_editor_absolutex="30dp"
+        android:background="@color/field"
+        android:textColorHint="@color/white"/>
 
     <EditText
         android:id="@+id/editText6"
         android:layout_width="351dp"
         android:layout_height="51dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/button"
         android:hint="Please enter your PASSWORD here"
         android:paddingLeft="35dp"
-        android:textColorHint="@color/text"
+        android:alpha="0.5"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absolutex="30dp" />
+        tools:layout_editor_absolutex="30dp"
+        android:background="@color/field"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -75,7 +77,7 @@
         android:layout_width="349dp"
         android:layout_height="54dp"
         android:layout_marginBottom="92dp"
-        android:backgroundTint="@color/button"
+
         android:text="Sign In"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"

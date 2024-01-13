@@ -9,28 +9,43 @@
 
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select user type"
         android:textColor="@color/white"
         android:textSize="25dp"
-        tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="318dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.473" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:src="@drawable/aeye"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.112" />
 
     <androidx.cardview.widget.CardView
 
+        android:id="@+id/cardView2"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:cardCornerRadius="100dp"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="389dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.231"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.616">
 
         <ImageView
             android:layout_width="100dp"
@@ -43,8 +58,12 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:cardCornerRadius="100dp"
-        tools:layout_editor_absoluteX="230dp"
-        tools:layout_editor_absoluteY="389dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toEndOf="@+id/cardView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.616">
 
         <ImageView
             android:layout_width="100dp"
