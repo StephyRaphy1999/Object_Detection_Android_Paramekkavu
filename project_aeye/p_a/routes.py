@@ -15,7 +15,7 @@ def object_detection():
     
     # if apiCall == "ureg":
     match apiCall:
-        case "ureg":
+        case "blind":
             data = request.get_json()
             print(data)
             new_user = Register(
@@ -25,8 +25,42 @@ def object_detection():
                 phone=data['phone'],
                 address=data['address'], 
                 dp_cert=data['dp_cert'],
-                usertype="user"
+                usertype="blind"
                 )
             db.session.add(new_user)
             db.session.commit()
-            return jsonify({'ResponseCode': '201', 'Result': 'true', 'ResponseMsg': 'User Registered Successfully!'})
+            return jsonify({'ResponseCode': '201', 'Result': 'true', 'ResponseMsg': 'Blind Registered Successfully!'})
+        case "caretaker":
+            data = request.get_json()
+            print(data)
+            new_user = Register(
+                email=data['email'],
+                name=data['name'], 
+                password=data['password'], 
+                phone=data['phone'],
+                address=data['address'], 
+                dp_cert=data['dp_cert'],
+                usertype="caretaker"
+                )
+            db.session.add(new_user)
+            db.session.commit()
+            return jsonify({'ResponseCode': '201', 'Result': 'true', 'ResponseMsg': 'Care-taker Registered Successfully!'})
+        case "signin":
+            data = request.get_json()
+            print(data)
+            email=data['email']
+            password=data['password']
+            a = Register.query.filter_by(email=email,password=password,usertype="admin").first()
+            b = Register.query.filter_by(email=email,password=password,usertype="blind").first()
+            c = Register.query.filter_by(email=email,password=password,usertype="caretaker").first()
+            if a:
+                return jsonify({'ResponseCode': '201', 'Result': 'true', 'ResponseMsg': 'Admin'})
+            elif b:
+                return jsonify({'ResponseCode': '201', 'Result': 'true', 'ResponseMsg': 'Blind'})
+            else:
+                return jsonify({'ResponseCode': '201', 'Result': 'true', 'ResponseMsg': 'Care-taker'})
+
+
+
+
+
