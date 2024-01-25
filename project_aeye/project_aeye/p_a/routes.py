@@ -217,7 +217,9 @@ def object_detection():
             return jsonify({'ResponseCode': '201', 'Result': 'true', 'Resultdata':{'blindusers':det}})
         
 
-
+# Blind
+        case "viewcaretakerid":
+            
 
 
 

@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/field"
     >
+
     <androidx.cardview.widget.CardView
+
         android:layout_width="360dp"
         android:layout_height="00dp"
         android:layout_gravity="center"
-        android:backgroundTint="@color/bg">
+        android:backgroundTint="@color/bg"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -75,21 +82,23 @@
                             android:text="Address: "
                             android:textColor="@color/white" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="60dp"
-                        android:orientation="horizontal"android:layout_marginTop="10dp">
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
                         <Button
                             android:layout_width="100dp"
                             android:layout_height="50dp"
-                            android:text="Accept">
-                        </Button>
+                            android:text="Accept"></Button>
+
                         <Button
                             android:layout_width="100dp"
                             android:layout_height="50dp"
-                            android:text="Reject"
-                            android:layout_marginLeft="10dp">
-                        </Button>
+                            android:layout_marginLeft="10dp"
+                            android:text="Reject"></Button>
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>

@@ -19,6 +19,7 @@ class Register(db.Model, UserMixin):
     password = db.Column(db.String(80))
     usertype = db.Column(db.String(80))
     dp_cert = db.Column(db.String(80))
+    status = db.Column(db.Integer,default=0)
     
 class Location(db.Model, UserMixin):
     id=db.Column(db.Integer, primary_key=True)
@@ -26,4 +27,31 @@ class Location(db.Model, UserMixin):
     location = db.Column(db.String(80))
     u_id = db.Column(db.Integer)
     photo = db.Column(db.String(80))
+
+class detected(db.Model, UserMixin):
+    id=db.Column(db.Integer, primary_key=True)
+    u_id = db.Column(db.Integer, ForeignKey('register.id'))
+    time = db.Column(db.String(80))
+    date = db.Column(db.String(80))
+    location = db.Column(db.String(80))
+    image = db.Column(db.String(80))
+    userid = relationship('Register',foreign_keys=[u_id])
+
+class assign(db.Model, UserMixin):
+    id=db.Column(db.Integer, primary_key=True)
+    blind_id=db.Column(db.Integer, ForeignKey('register.id'))
+    caretaker_id=db.Column(db.Integer, ForeignKey('register.id'))
+    blind=relationship('Register', foreign_keys=[blind_id])
+    caretaker=relationship('Register', foreign_keys=[caretaker_id])
+
+
+
+
+
+
+    
+
+
+
+
 

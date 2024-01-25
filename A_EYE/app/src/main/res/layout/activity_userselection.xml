@@ -48,6 +48,7 @@
         app:layout_constraintVertical_bias="0.616">
 
         <ImageView
+            android:id="@+id/blind"
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:src="@drawable/blindppl" />
@@ -68,7 +69,8 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:src="@drawable/caretaker" />
+            android:src="@drawable/caretaker"
+            android:id="@+id/caretaker"/>
     </androidx.cardview.widget.CardView>
 
 

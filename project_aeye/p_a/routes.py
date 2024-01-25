@@ -15,6 +15,7 @@ def object_detection():
     
     # if apiCall == "ureg":
     match apiCall:
+        # Register
         case "blind":
             data = request.get_json()
             print(data)
@@ -50,9 +51,9 @@ def object_detection():
             print(data)
             email=data['email']
             password=data['password']
-            a = Register.query.filter_by(email=email,password=password,usertype="admin").first()
-            b = Register.query.filter_by(email=email,password=password,usertype="blind").first()
-            c = Register.query.filter_by(email=email,password=password,usertype="caretaker").first()
+            a = Register.query.filter_by(email=email,password=password,usertype="admin",status=1).first()
+            b = Register.query.filter_by(email=email,password=password,usertype="blind",status=1).first()
+            c = Register.query.filter_by(email=email,password=password,usertype="caretaker",status=1).first()
             if a:
                 return jsonify({'ResponseCode': '201', 'Result': 'true', 'ResponseMsg': 'Admin'})
             elif b:
@@ -60,6 +61,187 @@ def object_detection():
             else:
                 return jsonify({'ResponseCode': '201', 'Result': 'true', 'ResponseMsg': 'Care-taker'})
 
+        # Admin
+        case "reqBlind":
+            data = request.get_json()
+            users=Register.query.filter_by(usertype='blind',status=0)
+            print("____________________blind-data_______________________")
+            print(users)
+            det=[]
+            for i in users:
+                dic={}
+                dic['id']=i.id
+                dic['usertype']=i.usertype
+                dic['name']=i.name
+                dic['email']=i.email
+                dic['phone']=i.phone
+                dic['address']=i.address
+                det.append(dic)
+            return jsonify({'ResponseCode': '201', 'Result': 'true', 'Resultdata':{'blindusers':det}})
+        
+        case "reqCaretaker":
+            data = request.get_json()
+            users=Register.query.filter_by(usertype='caretaker',status=0)
+            print("____________________caretaker-data_______________________")
+            print(users)
+            det=[]
+            for i in users:
+                dic={}
+                dic['id']=i.id
+                dic['usertype']=i.usertype
+                dic['name']=i.name
+                dic['email']=i.email
+                dic['phone']=i.phone
+                dic['address']=i.address
+                det.append(dic)
+           
+            return jsonify({'ResponseCode': '201', 'Result': 'true', 'Resultdata':{'blindusers':det}})
+        case "approve":
+            data = request.get_json()
+            id=data['id']
+            row = Register.query.get(id)
+            row.status=1
+            db.session.commit()
+            return jsonify({'ResponseCode': '201', 'Result': 'true', 'ResponseMsg': 'you are approved'})
+        case "reject":
+            data = request.get_json()
+            id=data['id']
+            row = Register.query.get(id)
+            row.status=2
+            db.session.commit()
+            return jsonify({'ResponseCode': '201', 'Result': 'true', 'ResponseMsg': 'you are rejected'})
+        case "assign":
+            data = request.get_json()
+            print(data)
+            assigned = assign(
+                blind_id=data['blind_id'],
+                caretaker_id=data['caretaker_id'], 
+                )
+            db.session.add(assigned)
+            db.session.commit()
+            return jsonify({'ResponseCode': '201', 'Result': 'true', 'ResponseMsg': 'Blind and Care-taker assigned successfully'})
+        case "assignView":
+           
+            assV=assign.query.all()
+            det=[]
+            for i in assV:
+                dic={}
+                dic['id']=i.id
+                dic['bid']=i.blind.id
+                dic['cid']=i.caretaker.id
+                dic['busertype']=i.blind.usertype
+                dic['busertype']=i.caretaker.usertype
+                dic['bname']=i.blind.name
+                dic['cname']=i.caretaker.name
+                dic['bemail']=i.blind.email
+                dic['cemail']=i.caretaker.email
+                dic['bphone']=i.blind.phone
+                dic['cphone']=i.caretaker.phone
+                dic['baddress']=i.blind.address
+                dic['caddress']=i.caretaker.address
+                det.append(dic)
+            return jsonify({'ResponseCode': '201', 'Result': 'true', 'Resultdata':{'blindusers':det}})
+        
+            
+
+        case "approvedBlind":
+            data = request.get_json()
+            users=Register.query.filter_by(usertype='blind',status=1)
+            print("_____________________Blind-data_______________________")
+            print(users)
+            det=[]
+            for i in users:
+                dic={}
+                dic['id']=i.id
+                dic['usertype']=i.usertype
+                dic['name']=i.name
+                dic['email']=i.email
+                dic['phone']=i.phone
+                dic['address']=i.address
+                det.append(dic)
+           
+            return jsonify({'ResponseCode': '201', 'Result': 'true', 'Resultdata':{'blindusers':det}})
+        
+        case "approvedCaretaker":
+            data = request.get_json()
+            users=Register.query.filter_by(usertype='caretaker', status=1)
+            print("____________________Caretaker-data_______________________")
+            print(users)
+            det=[]
+            for i in users:
+                dic={}
+                dic['id']=i.id
+                dic['usertype']=i.usertype
+                dic['name']=i.name
+                dic['email']=i.email
+                dic['phone']=i.phone
+                dic['address']=i.address
+                det.append(dic)
+           
+            return jsonify({'ResponseCode': '201', 'Result': 'true', 'Resultdata':{'blindusers':det}})
+        
+        case "rejectedBlind":
+            data = request.get_json()
+            users=Register.query.filter_by(usertype='blind', status=2)
+            print("____________________Blind-data_______________________")
+            print(users)
+            det=[]
+            for i in users:
+                dic={}
+                dic['id']=i.id
+                dic['usertype']=i.usertype
+                dic['name']=i.name
+                dic['email']=i.email
+                dic['phone']=i.phone
+                dic['address']=i.address
+                det.append(dic)
+           
+            return jsonify({'ResponseCode': '201', 'Result': 'true', 'Resultdata':{'blindusers':det}})
+        
+        case "rejectedCaretaker":
+            data = request.get_json()
+            users=Register.query.filter_by(usertype='caretaker', status=2)
+            print("____________________Caretaker-data_______________________")
+            print(users)
+            det=[]
+            for i in users:
+                dic={}
+                dic['id']=i.id
+                dic['usertype']=i.usertype
+                dic['name']=i.name
+                dic['email']=i.email
+                dic['phone']=i.phone
+                dic['address']=i.address
+                det.append(dic)
+           
+            return jsonify({'ResponseCode': '201', 'Result': 'true', 'Resultdata':{'blindusers':det}})
+        
+        case "assign":
+            data = request.get_json()
+            print(data)
+            new_user = assign(
+                blind_id=data['blind_id'],
+                caretaker_id=data['caretaker_id']
+                )
+            db.session.add(new_user)
+            db.session.commit()
+
+        case "profile":
+            data = request.get_json()
+            id=data['id']
+            row = Register.query.get(id)
+            det=[]
+            dic={}
+            dic['id']=row.id
+            dic['usertype']=row.usertype
+            dic['name']=row.name
+            dic['email']=row.email
+            dic['phone']=row.phone
+            dic['address']=row.address
+            det.append(dic)
+            return jsonify({'ResponseCode': '201', 'Result': 'true', 'Resultdata':{'profiledata':det}})
+        
+# Blind
 
 
 
