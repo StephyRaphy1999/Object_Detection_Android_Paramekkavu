@@ -9,6 +9,7 @@
 
 
     <TextView
+        android:id="@+id/signup2"
         android:layout_width="157dp"
         android:layout_height="46dp"
         android:alpha="@integer/material_motion_duration_long_1"
@@ -16,119 +17,121 @@
         android:textColor="@color/white"
         android:textSize="30dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editText8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <EditText
+        android:id="@+id/cusername"
+        android:layout_width="351dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="140dp"
+        android:alpha="0.5"
+        android:background="@color/field"
+        android:hint="USER NAME"
+        android:paddingLeft="28dp"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/cemail"
         android:layout_width="351dp"
         android:layout_height="51dp"
+        android:layout_marginTop="8dp"
         android:alpha="0.5"
-        android:hint="USER NAME"
-        android:paddingLeft="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.924"
         android:background="@color/field"
-        android:textColorHint="@color/white"/>
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="351dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="12dp"
-        android:alpha="0.5"
         android:hint="EMAIL"
         android:paddingLeft="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/field"
-        android:textColorHint="@color/white"/>
+        app:layout_constraintTop_toBottomOf="@+id/cusername" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/cphone"
         android:layout_width="351dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="8dp"
         android:alpha="0.5"
+        android:background="@color/field"
         android:hint="PHONE NUMBER"
         android:paddingLeft="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText4"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/field"
-        android:textColorHint="@color/white"/>
+        app:layout_constraintTop_toBottomOf="@+id/cemail" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/caddress"
         android:layout_width="351dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="8dp"
         android:alpha="0.5"
+        android:background="@color/field"
         android:hint="ADDRESS"
         android:inputType="textMultiLine"
         android:paddingLeft="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText3"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/field"
-        android:textColorHint="@color/white"/>
+        app:layout_constraintTop_toBottomOf="@+id/cphone" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/cpassword"
         android:layout_width="351dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="9dp"
         android:alpha="0.5"
+        android:background="@color/field"
         android:hint="PASSWORD"
         android:paddingLeft="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText7"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/field"
-        android:textColorHint="@color/white"/>
+        app:layout_constraintTop_toBottomOf="@+id/caddress" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/ccpassword"
         android:layout_width="351dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="10dp"
         android:alpha="0.5"
+        android:background="@color/field"
         android:hint="CONFIRM PASSWORD"
         android:paddingLeft="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/field"
-        android:textColorHint="@color/white"/>
+        app:layout_constraintTop_toBottomOf="@+id/cpassword" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/cupload"
         android:layout_width="351dp"
         android:layout_height="57dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="8dp"
         android:alpha="0.5"
         android:text="UPLOAD CERTIFICATE"
         android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ccpassword" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/csignup"
         android:layout_width="351dp"
         android:layout_height="57dp"
-        android:layout_marginBottom="100dp"
         android:alpha="0.9"
         android:text="sign up"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cupload" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

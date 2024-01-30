@@ -19,17 +19,20 @@ def object_detection():
         case "blind":
             data = request.get_json()
             print(data)
+            print(data['email'])
             new_user = Register(
                 email=data['email'],
                 name=data['name'], 
-                password=data['password'], 
+                password=data['cpassword'], 
                 phone=data['phone'],
                 address=data['address'], 
-                dp_cert=data['dp_cert'],
+                # dp_cert=data['dp_cert'],
                 usertype="blind"
                 )
+            print("before committing________________________________")
             db.session.add(new_user)
             db.session.commit()
+            print("after committing___________________________________________")
             return jsonify({'ResponseCode': '201', 'Result': 'true', 'ResponseMsg': 'Blind Registered Successfully!'})
         case "caretaker":
             data = request.get_json()
@@ -239,7 +242,7 @@ def object_detection():
             dic['phone']=row.phone
             dic['address']=row.address
             det.append(dic)
-            return jsonify({'ResponseCode': '201', 'Result': 'true', 'Resultdata':{'profiledata':det}})
+            return jsonify({'ResponseCode': '201', 'Result': 'true', 'Resultdata':{'profiledata':det}})                 
         
 # Blind
 
